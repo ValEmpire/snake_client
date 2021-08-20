@@ -15,25 +15,45 @@ const setupInput = function(conn) {
   stdin.setEncoding('utf8');
   stdin.resume();
 
-  const handleUserInput = function(data) {
-    if (data === '\u0003') {
-      process.exit();
-    }
-    if(data === 'w'){
-      connection.write("Move: up")
-    }
-    if(data === 'a'){
-      connection.write("Move: left")
-    }
-    if(data === 's'){
-      connection.write("Move: down")
-    }
-    if(data === 'd'){
-      connection.write("Move: right")
+  const handleUserInput = function(key) {
+
+    switch (key) {
+      case '\u0003':
+        process.exit();
+        break;
+      case '1':
+        connection.write("Say: Hello");
+        break;
+      case '2':
+        connection.write("Say: Hi");
+        break;
+      case '3':
+        connection.write("Say: Away?");
+        break;
+      case '4':
+        connection.write("Say: No");
+        break;
+      case '5':
+        connection.write("Say: Yeaha");
+        break;
+      case 'w':
+        connection.write("Move: up");
+        break;
+      case 'a':
+        connection.write("Move: left");
+        break;
+      case 's':
+        connection.write("Move: down");
+        break;
+      case 'd':
+        connection.write("Move: right");
+        break;
+      default:
+        break;
     }
   }
 
-  process.stdin.on("data", handleUserInput);
+  stdin.on("data", handleUserInput);
 
   return stdin;
 }
