@@ -10,6 +10,7 @@ This is simply a multiplayer take on the genre.
   git clone git@github.com:ValEmpire/snake_multiplayer.git
 
   //To start the server from snake_multiplayer directory
+  //Advise to run this code in seperate maximum size terminal for scoreboards
   cd server
   npm install
   npm run play
