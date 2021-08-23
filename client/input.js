@@ -28,8 +28,6 @@ const setupInput = function(conn) {
 
   const handleUserInput = async function(key) {
 
-    console.log(key.charCodeAt(0));
-
     // top most to exit if ctrl c is pressed
     if(key == '\u0003'){
       process.exit();
