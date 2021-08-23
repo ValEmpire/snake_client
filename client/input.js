@@ -39,6 +39,8 @@ const setupInput = function(conn) {
       switch (key) {
         case '\u000d': // enter key
 
+          console.log('\n');
+
           // only console log PLAYER_NAME_LENGTH characters
           console.log(`Your snake name is: ${name.substring(0,PLAYER_NAME_LENGTH)}`);
 

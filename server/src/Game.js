@@ -145,6 +145,8 @@ class Game {
 
   playerLeft(client) {
     const index = this.snakes.findIndex(s => s.client === client)
+    const snake = this.snakes.find(s => s.client === client)
+
     if (index >= 0) this.removeSnake(this.snakes[index], index)
     this.ui.updateScore(this.snakes)
     // this will send the message to all other players that this player name left the game
