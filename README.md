@@ -29,6 +29,7 @@ This game was not built from scratch. It was inspired and started from snek [(bl
 
 ## Added Features to Server
 - Broadcast message with the name of the newly connected player to other players
+- Broadcast message other players when player leaves the game
 - Display number of connected players
 - Display the names and scores of connected players 
 - Display the name of player with the highest score

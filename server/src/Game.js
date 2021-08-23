@@ -147,6 +147,8 @@ class Game {
     const index = this.snakes.findIndex(s => s.client === client)
     if (index >= 0) this.removeSnake(this.snakes[index], index)
     this.ui.updateScore(this.snakes)
+    // this will send the message to all other players that this player name left the game
+    this.snakes.forEach(s => client === s.client ? '' : s.client.write(`${snake.name} left the game.`))
   }
 
   checkDotHits(position, snake) {
